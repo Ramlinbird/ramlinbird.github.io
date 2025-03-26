@@ -195,6 +195,38 @@
             box-shadow: 0 6px 12px rgba(37, 99, 235, 0.2);
         }
         
+        .quote {
+            font-style: italic;
+            position: relative;
+            padding: 0 1.5em;
+            display: inline-block;
+            max-width: 100%;
+            margin: 0.5em 0;
+        }
+
+        .quote::before,
+        .quote::after {
+            font-family: "STKaiti", "楷体", serif;
+            position: absolute;
+            font-size: 1.5em;
+            line-height: 1;
+            color: var(--primary);
+            opacity: 0.6;
+            transition: all 0.3s ease;
+        }
+
+        .quote::before {
+            content: "「";
+            left: 0;
+            top: -0.1em;
+        }
+
+        .quote::after {
+            content: "」";
+            right: 0;
+            bottom: -0.1em;
+        }
+        
         @media (max-width: 768px) {
             .hero-content h1 {
                 font-size: 2.5rem;
@@ -206,6 +238,38 @@
             
             p {
                 font-size: 1.1rem;
+                padding: 0 0.5rem;
+            }
+
+            .quote {
+                padding: 0 1.2em;
+                font-size: 0.95em;
+                line-height: 1.6;
+            }
+
+            .quote::before,
+            .quote::after {
+                font-size: 1.3em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .quote {
+                padding: 0 1em;
+                font-size: 0.9em;
+            }
+
+            .quote::before,
+            .quote::after {
+                font-size: 1.2em;
             }
         }
     </style>
